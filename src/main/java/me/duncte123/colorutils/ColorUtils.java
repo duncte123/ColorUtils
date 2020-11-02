@@ -26,8 +26,6 @@ public class ColorUtils {
      * @return The color as int
      */
     public static int hexStringToInt(String hex) {
-        final String hexValue = "0x" + hex.replaceFirst("#", "");
-
-        return Integer.decode(hexValue);
+        return Integer.parseInt(hex.substring(1), 16);
     }
 }
